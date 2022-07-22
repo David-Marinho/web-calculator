@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
+    <script src="main.js"></script>
 </head>
 <body>
     <main id="calculadora">
-
-        <ul id="lista-botoes">
-            <input type="text">
+        <input id="input" type="text" value="">
+        <ul id="lista-botoes">  
             <li><button>CE</button></li>
-            <li><button>C</button></li>
-            <li><button>/</button></li>
-            <li><button>*</button></li>
-            <li><button>7</button></li>
-            <li><button>8</button></li>
-            <li><button>9</button></li>
-            <li><button>-</button></li>
-            <li><button>4</button></li>
-            <li><button>5</button></li>
-            <li><button>6</button></li>
-            <li><button>+</button></li>
-            <li><button>1</button></li>
-            <li><button>2</button></li>
-            <li><button>3</button></li>
+            <li><button onclick="limpar_tudo()">C</button></li>
+            <li><button onclick="btn_click('/')">/</button></li>
+            <li><button onclick="btn_click('X')">*</button></li>
+            <li><button onclick="btn_click('7')">7</button></li>
+            <li><button onclick="btn_click('8')">8</button></li>
+            <li><button onclick="btn_click('9')">9</button></li>
+            <li><button onclick="btn_click('-')">-</button></li>
+            <li><button onclick="btn_click('4')">4</button></li>
+            <li><button onclick="btn_click('5')">5</button></li>
+            <li><button onclick="btn_click('6')">6</button></li>
+            <li><button onclick="btn_click('+')">+</button></li>
+            <li><button onclick="btn_click('1')">1</button></li>
+            <li><button onclick="btn_click('2')">2</button></li>
+            <li><button onclick="btn_click('3')">3</button></li>
             <li id="box-igual"><button>=</button></li>
-            <li id="box-0"><button>0</button></li>
-            <li><button>,</button></li>
+            <li id="box-0"><button onclick="btn_click('0')">0</button></li>
+            <li><button onclick="btn_click('.')">,</button></li>
         </ul>
     </main>
 </body>
