@@ -11,29 +11,29 @@
 <body>
     <main id="calculadora">
         <div id="visor">
-            <p id="texto"></p>
-            <input id="input" type="text" value="" placeholder="0">
+            <p id="texto">0</p>
+            <input  id="input" type="text"  placeholder="0" autofocus >
         </div>
         
         <ul id="lista-botoes">  
-            <li><button>CE</button></li>
+            <li><button onclick="limpar()">CE</button></li>
             <li><button onclick="limpar_tudo()">C</button></li>
             <li><button onclick="operacao('/')">/</button></li>
-            <li><button onclick="operacao('X')">*</button></li>
-            <li><button onclick="btn_click('7')">7</button></li>
-            <li><button onclick="btn_click('8')">8</button></li>
-            <li><button onclick="btn_click('9')">9</button></li>
+            <li><button onclick="operacao('x')">*</button></li>
+            <li><button onclick="numeros('7')">7</button></li>
+            <li><button onclick="numeros('8')">8</button></li>
+            <li><button onclick="numeros('9')">9</button></li>
             <li><button onclick="operacao('-')">-</button></li>
-            <li><button onclick="btn_click('4')">4</button></li>
-            <li><button onclick="btn_click('5')">5</button></li>
-            <li><button onclick="btn_click('6')">6</button></li>
+            <li><button onclick="numeros('4')">4</button></li>
+            <li><button onclick="numeros('5')">5</button></li>
+            <li><button onclick="numeros('6')">6</button></li>
             <li><button onclick="operacao('+')">+</button></li>
-            <li><button onclick="btn_click('1')">1</button></li>
-            <li><button onclick="btn_click('2')">2</button></li>
-            <li><button onclick="btn_click('3')">3</button></li>
+            <li><button onclick="numeros('1')">1</button></li>
+            <li><button onclick="numeros('2')">2</button></li>
+            <li><button onclick="numeros('3')">3</button></li>
             <li id="box-igual"><button onclick="printar_resultado()">=</button></li>
-            <li id="box-0"><button onclick="btn_click('0')">0</button></li>
-            <li><button onclick="btn_click('.')">,</button></li>
+            <li id="box-0"><button onclick="numeros('0')">0</button></li>
+            <li><button onclick="numeros('.')">,</button></li>
         </ul>
     </main>
 </body>
