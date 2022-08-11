@@ -7,8 +7,7 @@ function zerar(){
 }
 
 function numeros(numero){
-    var input = document.getElementById('input')
-    input.value += numero
+    document.getElementById('input').value += numero
 }
 
 function limpar(){
@@ -36,7 +35,6 @@ function printar_resultado(){
     numero2 = parseFloat(input.value, 10) 
     var texto = document.getElementById('texto')
     texto.innerText = `${numero1} ${simbolo} ${numero2} = `
-    texto.style.visibility = 'visible'
 
     switch(simbolo){
         case '+':
