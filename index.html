@@ -6,35 +6,72 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
-    <script src="main.js"></script>
+    
 </head>
 <body>
-    <main id="calculadora">
-        <div id="visor">
-            <p id="texto">0</p>
-            <input  id="input" type="text"  placeholder="0" autofocus >
+    <main id="calc">
+        <div id="screen">
+            <p id="calculation">0</p>
+            <input id="input" type="number" placeholder="0" autofocus>
         </div>
         
-        <ul id="lista-botoes">  
-            <li><button onclick="limpar()">CE</button></li>
-            <li><button onclick="limpar_tudo()">C</button></li>
-            <li><button onclick="operacao('/')">/</button></li>
-            <li><button onclick="operacao('x')">*</button></li>
-            <li><button onclick="numeros('7')">7</button></li>
-            <li><button onclick="numeros('8')">8</button></li>
-            <li><button onclick="numeros('9')">9</button></li>
-            <li><button onclick="operacao('-')">-</button></li>
-            <li><button onclick="numeros('4')">4</button></li>
-            <li><button onclick="numeros('5')">5</button></li>
-            <li><button onclick="numeros('6')">6</button></li>
-            <li><button onclick="operacao('+')">+</button></li>
-            <li><button onclick="numeros('1')">1</button></li>
-            <li><button onclick="numeros('2')">2</button></li>
-            <li><button onclick="numeros('3')">3</button></li>
-            <li id="box-igual"><button onclick="printar_resultado()">=</button></li>
-            <li id="box-0"><button onclick="numeros('0')">0</button></li>
-            <li><button onclick="numeros('.')">,</button></li>
+        <ul id="button-grid">  
+            <li>
+                <button onclick="clearEntry()">CE</button>
+            </li>
+            <li>
+                <button onclick="clean()">C</button>
+            </li>
+            <li>
+                <button onclick="addOperation('/')">/</button>
+            </li>
+            <li>
+                <button onclick="addOperation('x')">*</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('7')">7</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('8')">8</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('9')">9</button>
+            </li>
+            <li>
+                <button onclick="addOperation('-')">-</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('4')">4</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('5')">5</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('6')">6</button>
+            </li>
+            <li>
+                <button onclick="addOperation('+')">+</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('1')">1</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('2')">2</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('3')">3</button>
+            </li>
+            <li id="result-btn">
+                <button onclick="printResult()">=</button>
+            </li>
+            <li id="zero-btn">
+                <button onclick="addSymbol('0')">0</button>
+            </li>
+            <li>
+                <button onclick="addSymbol('.')">,</button>
+            </li>
         </ul>
     </main>
 </body>
+<script src="main.js"></script>
 </html>

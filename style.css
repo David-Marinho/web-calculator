@@ -8,7 +8,7 @@ body{
 
 /*-----------------------------------body-----------------------------------*/
 
-#calculadora{
+#calc{
     min-width: 300px;
     padding: 15px;
     background-color: rgb(199, 199, 199);
@@ -16,23 +16,29 @@ body{
     border: 2px solid black;
 }
 
-/*-----------------------------------visor-----------------------------------*/
+/*-----------------------------------screen-----------------------------------*/
 
-#visor{
+#screen{
     background-color: white;
     height: 40px;
     border: 1px solid black;
     border-radius: 20px;
 }
 
-#input, #texto{
+#input, #calculation{
     text-align: right; 
     margin: 0px;
     padding-right: 20px;
 }
 
-#texto{
+#calculation{
     visibility: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 #input{
@@ -47,7 +53,7 @@ body{
     outline: none;
 }
 
-/*-----------------------------------botoes-----------------------------------*/
+/*-----------------------------------buttons-----------------------------------*/
 
 ul{
     padding: 0px;
@@ -57,7 +63,7 @@ li{
     list-style: none;
 }
 
-#lista-botoes{
+#button-grid{
     width: 300px;
     display: grid;
     grid-template-columns: repeat(4, 50px);
@@ -82,17 +88,17 @@ button:active{
     height: 98%;
 }
 
-#box-0{
+#zero-btn{
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-#box-igual{
+#result-btn{
     grid-column-start: 4;
     grid-row-start: 4;
     grid-row-end: 6; 
 }
 
-#box-0 button, #box-igual button{
+#zero-btn button, #result-btn button{
     border-radius: 15px;
 }

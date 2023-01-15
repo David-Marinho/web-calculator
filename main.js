@@ -1,64 +1,64 @@
-var numero1 = 0, numero2 = 0, result = 0
-var simbolo = ''
+var number1 = 0
+var number2 = 0
+var result = 0
+var operation = ''
+const input = document.getElementById('input')
+const calculation = document.getElementById('calculation')
 
-function zerar(){
-    numero1 = 0, numero2 = 0, result = 0
-    simbolo = ''
+function addSymbol(number){
+    input.value += number
 }
 
-function numeros(numero){
-    document.getElementById('input').value += numero
-}
-
-function limpar(){
-    document.getElementById('input').value = ''
-}
-
-function limpar_tudo(){
-    document.getElementById('input').value = ''
-    document.getElementById('texto').style.visibility = 'hidden'
-    zerar()
-}
-
-function operacao(botao){
-    var input = document.getElementById('input')
-    numero1 = parseFloat(input.value, 10) 
+function addOperation(botao){
+    number1 = parseFloat(input.value, 10) 
     input.value = ''
-    simbolo = botao
-    var texto = document.getElementById('texto')
-    texto.innerText = `${numero1} ${simbolo}`
-    texto.style.visibility = 'visible'
+    operation = botao
+    calculation.innerText = `${number1} ${operation}`
+    calculation.style.visibility = 'visible'
 }
 
-function printar_resultado(){
-    var input = document.getElementById('input')
-    numero2 = parseFloat(input.value, 10) 
-    var texto = document.getElementById('texto')
-    texto.innerText = `${numero1} ${simbolo} ${numero2} = `
+function printResult(){
+    number2 = parseFloat(input.value, 10)  
+    calculation.innerText = `${number1} ${operation} ${number2} = `
+    input.value = calc() 
+}
 
-    switch(simbolo){
+function calc(){
+    switch(operation){
         case '+':
-            result = numero1 + numero2
+            result = number1 + number2
         break
 
         case '-':
-            result = numero1 - numero2
+            result = number1 - number2
         break
 
         case 'x':
-            result = numero1 * numero2
+            result = number1 * number2
         break
 
         case '/':
-            if(numero2 == 0){
-                texto.innerText = 'ERRO - voce digitou 0 como divisor'
+            if(number == 0){
+                calculation.innerText = 'ERRO - voce digitou 0 como divisor'
             }
             else{
-                result = numero1 / numero2
+                result = number1 / number2
             }  
         break
     }
-
-    input.value = result 
-    result = 0
+    return result
 }
+
+function clean(){
+    input.value = ''
+    calculation.style.visibility = 'hidden'
+    number1 = 0 
+    number2 = 0
+    result = 0
+    operation = ''
+}
+
+function cleanEntry(){
+    input.value = ''
+}
+
