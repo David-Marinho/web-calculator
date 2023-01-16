@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
     
@@ -17,7 +17,7 @@
         
         <ul id="button-grid">  
             <li>
-                <button onclick="clearEntry()">CE</button>
+                <button onclick="cleanEntry()">CE</button>
             </li>
             <li>
                 <button onclick="clean()">C</button>
@@ -26,7 +26,7 @@
                 <button onclick="addOperation('/')">/</button>
             </li>
             <li>
-                <button onclick="addOperation('x')">*</button>
+                <button onclick="addOperation('x')">X</button>
             </li>
             <li>
                 <button onclick="addSymbol('7')">7</button>
@@ -62,10 +62,10 @@
                 <button onclick="addSymbol('3')">3</button>
             </li>
             <li id="result-btn">
-                <button onclick="printResult()">=</button>
+                <button class="long-btn" onclick="printResult()">=</button>
             </li>
             <li id="zero-btn">
-                <button onclick="addSymbol('0')">0</button>
+                <button class="long-btn" onclick="addSymbol('0')">0</button>
             </li>
             <li>
                 <button onclick="addSymbol('.')">,</button>
